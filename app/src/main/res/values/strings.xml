@@ -1,0 +1,32 @@
+<!--<resources>
+    <string name="app_name">farmerportal</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="login">login</string>
+    <string name="not_registered">not_registered</string>
+    <string name="register">register</string>
+    <string name="signUpConsumer">signUpConsumer</string>
+    <string name="signUpFarmer">signUpFarmer</string>
+    <string name="sign_up">sign_up</string>
+    <string name="phone">phone</string>
+    <string name="confirm_password">confirm_password</string>
+    <string name="name">name</string>
+</resources>-->
+<resources>
+<string name="app_name">FarmerPortal</string>
+<string name="signUpConsumer">Login as Consumer</string>
+<string name="signUpFarmer"> Login as Farmer</string>
+<string name="name">Name</string>
+<string name="username">Username</string>
+<string name="password">Password</string>
+<string name="login">Login</string>
+<string name="not_registered">Not Registered?</string>
+<string name="register">REGISTER</string>
+<string name="confirm_password">Confirm Password</string>
+<string name="already_registered">Already registered?</string>
+<string name="loginCap">LOGIN</string>
+<string name="aadhar_number">Aadhar Number</string>
+<string name="sign_up">Sign Up</string>
+<string name="phone">Phone Number</string>
+
+</resources>

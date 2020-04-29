@@ -1,0 +1,172 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_gravity="center"
+android:layout_marginLeft="15dp"
+android:layout_marginRight="15dp"
+android:orientation="vertical"
+tools:context="com.magnus.farmerportal.ConsumerActivity">
+
+    <AutoCompleteTextView
+        android:id="@+id/selectCrop"
+        android:layout_width="281dp"
+        android:layout_height="53dp"
+        android:hint="Crop Selection"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058" />
+
+
+
+<Button
+    android:id="@+id/showList"
+    android:layout_width="75dp"
+    android:layout_height="42dp"
+    android:onClick="showFarmerList"
+    android:text="SHOW"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.742"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.056" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="373dp"
+        android:layout_height="425dp"
+        android:layout_marginTop="120dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.576">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/cropId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="20sp"
+                android:text="ID"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/cropId"
+                android:text="Farmer Name"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/phoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@+id/name"
+                android:text="Price"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@+id/phoneNumber"
+                android:text="Quantity"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/idValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cropId"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15sp"
+                android:paddingLeft="20sp"
+                android:text="ID"
+                android:textColor="?attr/actionMenuTextColor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/listNames"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15sp"
+                android:layout_toRightOf="@+id/cropId"
+                android:text="No farmer"
+                android:textColor="?attr/actionMenuTextColor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/priceEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneNumber"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15sp"
+                android:layout_toRightOf="@+id/name"
+                android:text="0.0"
+                android:textColor="?attr/actionMenuTextColor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/quantityEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/quantity"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15sp"
+                android:layout_toRightOf="@+id/phoneNumber"
+                android:text="0.0"
+                android:textColor="?attr/actionMenuTextColor"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/idConsumer"
+        android:layout_width="209dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="23dp"
+        android:gravity="center_horizontal"
+        android:hint=" ID Of Farmer You Want"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectCrop"
+        app:layout_constraintVertical_bias="0.743" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="SUBMIT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

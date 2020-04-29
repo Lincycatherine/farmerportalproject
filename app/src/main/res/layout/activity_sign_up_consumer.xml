@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundimagefarmer"
+    android:orientation="vertical"
+    tools:context=".SignUpConsumer"
+    >
+    //android:background="@drawable/backgroundimagefarmer"
+
+    <ImageView
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:layout_marginLeft="5sp"
+        android:id="@+id/rback"
+        android:src="@drawable/arrow" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="140dp"
+        android:background="?attr/actionModeBackground"
+        android:drawableLeft="@drawable/username1"
+        android:hint="@string/name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/user"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="?attr/actionModeBackground"
+        android:drawableLeft="@drawable/username1"
+        android:hint="@string/username"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="188dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="?attr/actionModeBackground"
+        android:drawableLeft="@drawable/password"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+    <EditText
+        android:id="@+id/cnfrmpassword"
+        android:layout_width="188dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="?attr/actionModeBackground"
+        android:drawableLeft="@drawable/password"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword" />
+
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="?attr/actionModeBackground"
+        android:drawableLeft="@drawable/aadhar_logo"
+        android:hint="@string/phone"
+        android:inputType="phone" />
+
+    <CheckBox
+        android:id="@+id/rshowPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:text="Show Password" />
+
+    <Button
+        android:id="@+id/signin"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:onClick="signinBtn"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="@string/sign_up" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"/>
+
+</LinearLayout>
