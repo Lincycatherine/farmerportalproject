@@ -71,12 +71,10 @@ public class SignUpConsumer extends AppCompatActivity {
         final LocationListener locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
-                //mlocation = location;
+
                 position[0] =String.valueOf(location.getLatitude())+","+String.valueOf(location.getLongitude());
                 Log.i( location.toString(),"Location Changes");
-                //txtLat.setText(String.valueOf(location.getLatitude()));
-                //longitude.setText();
-                //Geocoder geocoder=new Geocoder(MainActivity.this);
+
                 try
                 {
                     Geocoder geocoder=new Geocoder(SignUpConsumer.this);

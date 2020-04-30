@@ -78,9 +78,7 @@ public class SignUpFarmer extends AppCompatActivity {
                 try {
                     Geocoder geocoder = new Geocoder(SignUpFarmer.this);
                     List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-                    // txtLat.setText(txtLat.getText()+"\n"+addresses.get(0).getAddressLine(0)+","+
-                    //        addresses.get(0).getAddressLine(1)+","+
-                    //        addresses.get(0).getAddressLine(2));
+
                     position[1] = addresses.get(0).getAddressLine(0);
                     position[2] = addresses.get(0).getAddressLine(1);
                     position[3] = addresses.get(0).getAddressLine(2);
