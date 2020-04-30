@@ -52,6 +52,11 @@ public class SignUpConsumer extends AppCompatActivity {
         //Intent intent1=getIntent();
         //final String[] position=intent1.getStringArrayExtra("Location");
 
+        if (ContextCompat.checkSelfPermission(SignUpConsumer.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ) {
+            ActivityCompat.requestPermissions(SignUpConsumer.this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+
+            return;
+        }
 
         name = (EditText) findViewById(R.id.name);
         pass = (EditText) findViewById(R.id.password);
@@ -119,7 +124,9 @@ public class SignUpConsumer extends AppCompatActivity {
         criteria.setVerticalAccuracy(Criteria.ACCURACY_HIGH);
         final Looper looper = null;
 
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
+        locationManager.requestSingleUpdate(criteria, locationListener, looper);
 
 
 
@@ -135,14 +142,8 @@ public class SignUpConsumer extends AppCompatActivity {
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ContextCompat.checkSelfPermission(SignUpConsumer.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ) {
-                    ActivityCompat.requestPermissions(SignUpConsumer.this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, 1);
 
-                    return;
-                }
-                LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
-                locationManager.requestSingleUpdate(criteria, locationListener, looper);;
                 if(name.getText().toString().equals("")||
                         user1.getText().toString().equals("")||
                         pass.getText().toString().equals("")||cnfrmpass.getText().toString().equals(""))
@@ -152,12 +153,12 @@ public class SignUpConsumer extends AppCompatActivity {
                 }
 
                 // check if both password matches
-                if(!pass.getText().toString().equals(cnfrmpass.getText().toString()))
+                else if(!pass.getText().toString().equals(cnfrmpass.getText().toString()))
                 {
                     Toast.makeText(getApplicationContext(), "Password does not match", Toast.LENGTH_LONG).show();
                 }
 
-                if(phone.getText().toString().length()!=10)
+                else if(phone.getText().toString().length()!=10)
                 {
                     Toast.makeText(getApplicationContext(), "Please enter a 10 digit Phone number", Toast.LENGTH_LONG).show();
                 }

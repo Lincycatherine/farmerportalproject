@@ -148,11 +148,11 @@ public class SignUpFarmer extends AppCompatActivity {
                 }
 
                 // check if both password matches
-                if (!pass.getText().toString().equals(cnfrmpass.getText().toString())) {
+                else if (!pass.getText().toString().equals(cnfrmpass.getText().toString())) {
                     Toast.makeText(getApplicationContext(), "Password does not match", Toast.LENGTH_LONG).show();
                 }
                 //enter 10 digit customer
-                if (phone.getText().toString().length() != 10) {
+                else if (phone.getText().toString().length() != 10) {
                     Toast.makeText(getApplicationContext(), "Please enter a 10 digit Phone number", Toast.LENGTH_LONG).show();
                 } else {
 
